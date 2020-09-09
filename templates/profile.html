@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Profile page</h1>
+
+<p>This is your profile only visible to you.</p>
+
+<h2>Your GitHub data:</h2>
+
+<img src="200px" src="{{github_profile_data.avatar_url}}" alt="profile pic">
+
+<div class="d-flex flex-column align-items-start">
+<ul class="list-group list-group-flush">
+    <li class="list-group-item list-group-item-info p-2">
+        <p><strong>Username:</strong>{{github_profile_data.login}}</p>
+    </li>
+
+        <li class="list-group-item list-group-item-info p-2">
+        <p><strong>Full name:</strong>{{github_profile_data.name}}</p>
+    </li>
+    <li class="list-group-item list-group-item-info p-2">
+        <p><strong>Location:</strong>{{github_profile_data.location}}</p>
+    </li>
+    <li class="list-group-item list-group-item-info p-2">
+        <p><strong>Blog:</strong>{{github_profile_data.blog}}</p>
+    </li>
+    <li class="list-group-item list-group-item-info p-2">
+        <p><strong>Email:</strong>{{github_profile_data.email}}</p>
+    </li>
+    <li class="list-group-item list-group-item-info p-2">
+        <p><strong>Number of public repositories:</strong>{{github_profile_data.public_repos}}</p>
+    </li>
+</ul>
+</div>
+{% endblock content %}
